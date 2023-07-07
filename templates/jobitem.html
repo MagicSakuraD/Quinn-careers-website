@@ -1,0 +1,11 @@
+<div class="card-body border-b-2 border-indigo-500/50 flex justify-between flex-row">
+      <div>
+        <h4 class="text-slate-400">{{job['title']}}</h4>
+          <div><b>地点:</b>{{job['location']}}</div>
+          {% if 'salary' in job%}
+           <div class=""><b>薪资:</b>{{job['salary']}}</div>
+          {% endif %}
+      </div>
+      <div><button class="btn btn-outline btn-primary w-16">投递</button></div>
+</div>
+      

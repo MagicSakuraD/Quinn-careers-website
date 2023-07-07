@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quinn Careers</title>
+  <title>{{company_name}} Careers</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
@@ -20,18 +20,20 @@
   </style>
 </head>
 <body>
-  <main class="max-w-3xl mx-auto">
-    <h1 class="font-mono text-5xl text-sky-400 text-center">Quinn Careers</h1>
+  <main class="max-w-3xl mx-auto container ">
+    <h1 class="font-mono text-5xl text-sky-400 text-center m-3">Quinn Careers</h1>
   <img src="https://quinn-careers-website.timchen24.repl.co/static/banner.jpg" alt="banner" class="object-cover w-full h-96">
   <h2>About Quinn</h2>
-  <p>Quinn Careers is a job search website that connects job seekers with employers across various industries and job functions. The platform offers a user-friendly interface that enables job seekers to create profiles, search and apply for jobs, and receive alerts for new job postings. Quinn Careers partners with a wide range of employers, from small startups to large corporations, to provide job seekers with a diverse array of job opportunities. Whether you are a recent graduate or an experienced professional, Quinn Careers can help you find your next career opportunity.</p>
+  <p class="leading-normal">Quinn Careers is a job search website that connects job seekers with employers across various industries and job functions. The platform offers a user-friendly interface that enables job seekers to create profiles, search and apply for jobs, and receive alerts for new job postings. Quinn Careers partners with a wide range of employers, from small startups to large corporations, to provide job seekers with a diverse array of job opportunities. Whether you are a recent graduate or an experienced professional, Quinn Careers can help you find your next career opportunity.</p>
   <h2>Open positions</h2>
-  <p>TODO - Show the jobs here</p>
-  <div class="text-center">
-    <button class="btn glass">Contact Us</button>
-    <p>Copyright 2022, Quinn </p>
+  <div>{% for job in jobs %}
+    {% include 'jobitem.html' %}
+    {% endfor %}
   </div>
-    
+  <div class="text-center">
+    <button class="btn glass mt-2">Contact Us</button>
+    <p class="my-2">Copyright 2022, Quinn </p>
+  </div>
   </main>
   
 
